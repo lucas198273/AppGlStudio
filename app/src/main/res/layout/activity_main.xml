@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_background"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        tools:context=".MainActivity">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/myCardView"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="#010102"
+            app:cardCornerRadius ="80dp"
+            app:cardElevation="4dp"
+            app:strokeColor="#F8F5F5"
+            app:strokeWidth="2dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo_latfy"
+                android:importantForAccessibility="no" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <EditText
+            android:id="@+id/edit_nome_completo"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_hint__edit_nome"
+            android:textColorHint="#686D8A"
+            android:background="@drawable/bg_button_enable"
+            android:maxLines="1"
+            android:inputType="text"
+            android:padding="15dp"
+            android:layout_marginTop="20dp"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/edit_sobrenome"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_hint__edit_telefone"
+            android:textColorHint="#686D8A"
+            android:background="@drawable/bg_button_enable"
+            android:maxLines="1"
+            android:inputType="text"
+            android:padding="15dp"
+            android:layout_marginTop="20dp"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/edittelefone"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_hint__edit_tipo_servico"
+            android:textColorHint="#686D8A"
+            android:background="@drawable/bg_button_enable"
+            android:maxLines="1"
+            android:inputType="text"
+            android:padding="15dp"
+            android:layout_marginTop="20dp"
+            android:importantForAutofill="no" />
+
+        <Button
+            android:id="@+id/btLogin"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_button_finalizar"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="15dp"/>
+
+    </LinearLayout>
+</ScrollView>

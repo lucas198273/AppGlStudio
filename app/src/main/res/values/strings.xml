@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AppGlStudio</string>
+    <string name="txt_titulo">Agendamento</string>
+    <string name="txt_hint__edit_nome">Primieiro Nome</string>
+    <string name="txt_hint__edit_sobrenome">Sobrenome</string>
+    <string name="txt_hint__edit_tipo_servico">Tipo de Serviço</string>
+    <string name="txt_hint__edit_telefone">Telefone</string>
+    <string name="txt_button_limpar">Limpar</string>
+    <string name="txt_button_salvar">Salvar</string>
+    <string name="txt_button_finalizar">Finalizar</string>
+    <string name="image_description">logotipo\n</string>
+</resources>
