@@ -1,29 +1,27 @@
 package devandroid.lucasdias.appglstudio;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.SharedPreferences;
 import android.os.Bundle;
-
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.util.Map;
-import java.util.Set;
+import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.List;
+
+import devandroid.lucasdias.appglstudio.R;
 import devandroid.lucasdias.appglstudio.controller.AgendamentoController;
+import devandroid.lucasdias.appglstudio.controller.TipoServicoController;
 import devandroid.lucasdias.appglstudio.model.AgendamentoConfirmado;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
     AgendamentoController controller;
-
-
+    TipoServicoController tipoServicoController;
+    List<String> listaNomesServicos;
 
     EditText nomeCompleto;
     EditText telefone;
@@ -31,69 +29,58 @@ public class MainActivity extends AppCompatActivity {
     Button btFinalizar;
     Button btLimpar;
     AgendamentoConfirmado agendamentoUsuario;
+    Spinner spinner;
 
-@Override
-protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.agendamento_user);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.agendamento_user);
 
-    agendamentoUsuario = new AgendamentoConfirmado();
-    controller = new AgendamentoController(MainActivity.this);
-    agendamentoUsuario = controller.buscar(agendamentoUsuario);
+        // Inicializa os controladores antes de utilizá-los
+        controller = new AgendamentoController(MainActivity.this);
+        tipoServicoController = new TipoServicoController();
+
+        agendamentoUsuario = new AgendamentoConfirmado();
+        agendamentoUsuario = controller.buscar(agendamentoUsuario);
+
+        // Agora que os controladores estão inicializados, podemos usar seus métodos
+        listaNomesServicos = tipoServicoController.dadosParaOSpinner();
 
         nomeCompleto = findViewById(R.id.edit_nome_completo);
         telefone = findViewById(R.id.edit_telefone);
-        tipoServico = findViewById(R.id.edit_tipo_servico);
+        tipoServico = findViewById(R.id.edit_tipoServico);
         btFinalizar = findViewById(R.id.btLogin);
         btLimpar = findViewById(R.id.btLimpar);
+        spinner = findViewById(R.id.btSpinner);
 
-        nomeCompleto.setText(agendamentoUsuario.getNomeDoUsuario());
-
-
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listaNomesServicos);
+        adapter.setDropDownViewResource(android.R.layout.simple_list_item_1);
+        spinner.setAdapter(adapter);
 
         nomeCompleto.setText(agendamentoUsuario.getNomeDoUsuario());
         telefone.setText(agendamentoUsuario.getTelefoneContato());
         tipoServico.setText(agendamentoUsuario.getTipoServico());
 
-
         btFinalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 agendamentoUsuario.setNomeCompleto(nomeCompleto.getText().toString());
                 agendamentoUsuario.setTelefoneContato(telefone.getText().toString());
                 agendamentoUsuario.setTipoServico(tipoServico.getText().toString());
 
-                Toast.makeText(MainActivity.this,"Cadastro realizado "+agendamentoUsuario.getNomeDoUsuario(),Toast.LENGTH_LONG).show();
-                /*finish();*/
+                Toast.makeText(MainActivity.this, "Cadastro realizado " + agendamentoUsuario.getNomeDoUsuario(), Toast.LENGTH_LONG).show();
                 controller.salvar(agendamentoUsuario);
-
-
-
             }
         });
-
-
-
-
-
-         
 
         btLimpar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 nomeCompleto.setText("");
                 telefone.setText("");
-                tipoServico.setText("");
+                tipoServico.setText(""); // Corrigido: limpando o campo tipoServico
                 controller.limpar();
-
-
-
             }
         });
-
-
-
     }
-
 }

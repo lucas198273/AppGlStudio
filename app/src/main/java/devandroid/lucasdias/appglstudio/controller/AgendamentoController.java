@@ -9,10 +9,13 @@ public class AgendamentoController {
     public static final String DS_USUARIOS = "pref_listauser";
     SharedPreferences preferences;
     SharedPreferences.Editor listCadastroUsuarios;
+
+
     public AgendamentoController(MainActivity mainActivity) {
         preferences = mainActivity.getSharedPreferences(DS_USUARIOS, 0);
         listCadastroUsuarios = preferences.edit();
     }
+
     public void salvar(AgendamentoConfirmado agendamentoUsuario) {
         listCadastroUsuarios.putString("NomeCompleto", agendamentoUsuario.getNomeDoUsuario());
         listCadastroUsuarios.putString("Telefone", agendamentoUsuario.getTelefoneContato());

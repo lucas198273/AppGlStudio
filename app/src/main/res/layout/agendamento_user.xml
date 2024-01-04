@@ -18,8 +18,8 @@
 
 
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
             android:layout_margin="16dp"
             app:cardBackgroundColor="#1D024C"
             app:cardCornerRadius ="80dp"
@@ -61,20 +61,35 @@
             android:padding="15dp"
             android:layout_marginTop="20dp"
             android:importantForAutofill="no" />
-
-        <EditText
-            android:id="@+id/edit_tipo_servico"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selecione um Serviço"
+            android:textSize="30dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+        <EditText android:id="@+id/edit_tipoServico"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/bg_button_enable"
-            android:hint="@string/txt_hint__edit_tipo_servico"
-            android:importantForAutofill="no"
-            android:inputType="text"
-            android:maxLines="1"
-            android:padding="15dp"
+           android:hint="@string/txt_hint__edit_tipo_servico"
+            android:textColorHint="#5E5E9E"
             android:textColor="@color/black"
-            android:textColorHint="#5E5E9E" />
+            android:background="@drawable/bg_button_enable"
+            android:maxLines="1"
+            android:inputType="text"
+            android:padding="15dp"
+            android:layout_marginTop="20dp"
+            android:importantForAutofill="no" />
+
+
+        <Spinner
+            android:id="@+id/btSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+
+            />
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -110,6 +125,7 @@
                 android:layout_marginBottom="20dp"
                 android:padding="15dp"/>
         </LinearLayout>
+
 
 
 
