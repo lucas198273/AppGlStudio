@@ -1,4 +1,4 @@
-package devandroid.lucasdias.appglstudio;
+package devandroid.lucasdias.appglstudio.view;
 
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +17,7 @@ import devandroid.lucasdias.appglstudio.controller.AgendamentoController;
 import devandroid.lucasdias.appglstudio.controller.TipoServicoController;
 import devandroid.lucasdias.appglstudio.model.AgendamentoConfirmado;
 
-public class MainActivity extends AppCompatActivity {
+public class AgendamentoActivity extends AppCompatActivity {
 
     AgendamentoController controller;
     TipoServicoController tipoServicoController;
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.agendamento_user);
 
         // Inicializa os controladores antes de utilizá-los
-        controller = new AgendamentoController(MainActivity.this);
+        controller = new AgendamentoController(AgendamentoActivity.this);
         tipoServicoController = new TipoServicoController();
 
         agendamentoUsuario = new AgendamentoConfirmado();
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                 agendamentoUsuario.setTelefoneContato(telefone.getText().toString());
                 agendamentoUsuario.setTipoServico(tipoServico.getText().toString());
 
-                Toast.makeText(MainActivity.this, "Cadastro realizado " + agendamentoUsuario.getNomeDoUsuario(), Toast.LENGTH_LONG).show();
+                Toast.makeText(AgendamentoActivity.this, "Cadastro realizado " + agendamentoUsuario.getNomeDoUsuario(), Toast.LENGTH_LONG).show();
                 controller.salvar(agendamentoUsuario);
             }
         });

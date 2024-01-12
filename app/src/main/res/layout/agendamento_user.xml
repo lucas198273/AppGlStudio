@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,8 +16,6 @@
         android:paddingStart="40dp"
         android:paddingEnd="40dp"
         tools:context=".MainActivity">
-
-
         <com.google.android.material.card.MaterialCardView
             android:layout_width="250dp"
             android:layout_height="250dp"
@@ -26,16 +25,13 @@
             app:cardElevation="4dp"
             app:strokeColor="#0C0909"
             app:strokeWidth="2dp">
-
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
                 android:src="@drawable/logo_latfy"
                 android:importantForAccessibility="no" />
-
         </com.google.android.material.card.MaterialCardView>
-
         <EditText android:id="@+id/edit_nome_completo"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
@@ -48,7 +44,6 @@
             android:padding="15dp"
             android:layout_marginTop="20dp"
             android:importantForAutofill="no" />
-
         <EditText android:id="@+id/edit_telefone"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
@@ -61,13 +56,6 @@
             android:padding="15dp"
             android:layout_marginTop="20dp"
             android:importantForAutofill="no" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Selecione um Serviço"
-            android:textSize="30dp"
-            android:textColor="@color/white"
-            android:textStyle="bold"/>
         <EditText android:id="@+id/edit_tipoServico"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
@@ -80,25 +68,25 @@
             android:padding="15dp"
             android:layout_marginTop="20dp"
             android:importantForAutofill="no" />
-
-
+        <TextView
+            android:layout_width="350dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Selecione um Serviço"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
         <Spinner
             android:id="@+id/btSpinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
-
-            />
-
-
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/white" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:padding="15dp"
-            >
-
+            android:padding="15dp">
             <Button android:id="@+id/btLimpar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -111,7 +99,6 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:padding="15dp"/>
-
             <Button android:id="@+id/btLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -125,9 +112,5 @@
                 android:layout_marginBottom="20dp"
                 android:padding="15dp"/>
         </LinearLayout>
-
-
-
-
     </LinearLayout>
 </ScrollView>

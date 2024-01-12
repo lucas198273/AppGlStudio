@@ -2,8 +2,8 @@ package devandroid.lucasdias.appglstudio.controller;
 
 import android.content.SharedPreferences;
 
-import devandroid.lucasdias.appglstudio.MainActivity;
 import devandroid.lucasdias.appglstudio.model.AgendamentoConfirmado;
+import devandroid.lucasdias.appglstudio.view.AgendamentoActivity;
 
 public class AgendamentoController {
     public static final String DS_USUARIOS = "pref_listauser";
@@ -11,10 +11,11 @@ public class AgendamentoController {
     SharedPreferences.Editor listCadastroUsuarios;
 
 
-    public AgendamentoController(MainActivity mainActivity) {
+    public AgendamentoController(AgendamentoActivity mainActivity) {
         preferences = mainActivity.getSharedPreferences(DS_USUARIOS, 0);
         listCadastroUsuarios = preferences.edit();
     }
+
 
     public void salvar(AgendamentoConfirmado agendamentoUsuario) {
         listCadastroUsuarios.putString("NomeCompleto", agendamentoUsuario.getNomeDoUsuario());
