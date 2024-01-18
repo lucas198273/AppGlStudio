@@ -16,22 +16,12 @@
         android:paddingStart="40dp"
         android:paddingEnd="40dp"
         tools:context=".MainActivity">
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:layout_margin="16dp"
-            app:cardBackgroundColor="#1D024C"
-            app:cardCornerRadius ="80dp"
-            app:cardElevation="4dp"
-            app:strokeColor="#0C0909"
-            app:strokeWidth="2dp">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                android:src="@drawable/logo_latfy"
-                android:importantForAccessibility="no" />
-        </com.google.android.material.card.MaterialCardView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:src="@drawable/baner_tatto"/>
+
         <EditText android:id="@+id/edit_nome_completo"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
