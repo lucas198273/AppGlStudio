@@ -4,6 +4,7 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="colorPrimaryDark">@color/roxo</item>
+
     </style>
 
     <style name="Theme.AppGlStudio" parent="Base.Theme.AppGlStudio" />

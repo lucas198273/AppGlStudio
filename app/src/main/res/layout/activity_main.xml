@@ -14,27 +14,17 @@
 
         >
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="30dp"
-            app:cardCornerRadius="40dp"
-            app:cardBackgroundColor="@color/CorBotoes">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:background="@color/roxo">
+
+
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="300dp"
+                    android:layout_width="350dp"
                     android:layout_height="300dp"
                     android:layout_margin="16dp"
                     app:cardBackgroundColor="#1D024C"
                     app:cardCornerRadius ="80dp"
                     app:cardElevation="4dp"
-                    app:strokeColor="#0C0909"
+                    app:strokeColor="#673AB7"
                     app:strokeWidth="10dp">
 
                     <ImageView
@@ -42,7 +32,7 @@
                         android:layout_height="wrap_content"
                         android:importantForAccessibility="no"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/logo_latfy" />
+                        android:src="@drawable/bemvindo" />
 
                 </com.google.android.material.card.MaterialCardView>
 
@@ -85,13 +75,6 @@
                     android:layout_marginBottom="20dp"
                     android:padding="15dp"/>
             </LinearLayout>
-
-
-
-
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
 
 
 </ScrollView>

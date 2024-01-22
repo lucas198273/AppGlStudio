@@ -64,6 +64,8 @@ public class AgendamentoActivity extends AppCompatActivity {
         btFinalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 agendamentoUsuario.setNomeCompleto(nomeCompleto.getText().toString());
                 agendamentoUsuario.setTelefoneContato(telefone.getText().toString());
                 agendamentoUsuario.setTipoServico(tipoServico.getText().toString());
