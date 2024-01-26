@@ -13,11 +13,7 @@
         android:background="@drawable/shape_background"
 
         >
-
-
-
-
-                <com.google.android.material.card.MaterialCardView
+        <com.google.android.material.card.MaterialCardView
                     android:layout_width="350dp"
                     android:layout_height="300dp"
                     android:layout_margin="16dp"
