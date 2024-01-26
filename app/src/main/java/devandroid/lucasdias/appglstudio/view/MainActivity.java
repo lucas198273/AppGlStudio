@@ -59,18 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, MainController.menssagemErroCampoVazio(), Toast.LENGTH_LONG).show();
             }
 
-          /*  if (isCampoOk){
 
-                String nomeCadastrado =" lucas";
-                if (edit_nome_user.toString().equals(nomeCadastrado)) {
-                    Intent intent = new Intent(MainActivity.this, AgendamentoActivity.class);
-                    startActivity(intent);
-                }
-
-                // Realize a lógica de verificação das credenciais aqui
-            }else {
-                Toast.makeText(MainActivity.this, MainController.menssagemErroCampoVazio(), Toast.LENGTH_LONG).show();
-            }*/
 
         });
     }

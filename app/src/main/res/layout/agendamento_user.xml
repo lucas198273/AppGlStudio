@@ -30,7 +30,7 @@
             android:textColor="@color/black"
             android:background="@drawable/bg_button_enable"
             android:maxLines="1"
-            android:inputType="text"
+            android:inputType="textPersonName"
             android:padding="15dp"
             android:layout_marginTop="20dp"
             android:importantForAutofill="no" />
@@ -42,7 +42,7 @@
             android:textColor="@color/black"
             android:background="@drawable/bg_button_enable"
             android:maxLines="1"
-            android:inputType="text"
+            android:inputType="phone"
             android:padding="15dp"
             android:layout_marginTop="20dp"
             android:importantForAutofill="no" />
